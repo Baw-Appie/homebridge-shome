@@ -1,9 +1,14 @@
 {
   "name": "homebridge-shome",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "An Samsung SDS sHome plugin for homebridge written in javascript",
   "main": "src/index.js",
-  "keywords": ["homebridge-plugin", "shome", "samsung", "samsungsds"],
+  "keywords": [
+    "homebridge-plugin",
+    "shome",
+    "samsung",
+    "samsungsds"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
