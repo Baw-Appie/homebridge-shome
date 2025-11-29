@@ -2,6 +2,7 @@
   "name": "homebridge-shome",
   "version": "2.0.1",
   "description": "An Samsung SDS sHome plugin for homebridge written in javascript",
+  "type": "module",
   "main": "src/index.js",
   "keywords": [
     "homebridge-plugin",

@@ -1,5 +1,5 @@
-var sHomeAPI = require('../../lib/api.js')
-var caching = require('promise-memoize')
+import * as sHomeAPI from '../../lib/api.js';
+import caching from 'promise-memoize';
 
 let cachedDeviceInfoListRequest = caching(sHomeAPI.getDeviceInfoList, { maxAge: 10 * 1000 });
 
@@ -40,4 +40,4 @@ class doorlookAccessory {
     }
 }
 
-module.exports = doorlookAccessory;
+export default doorlookAccessory;
