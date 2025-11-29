@@ -1,18 +1,21 @@
 // var HomeBridge = require('homebridge')
-var airconAccessory = require('./element/Aircon.js')
-var lightAccessory = require('./element/Light.js')
-var doorlockAccessory = require('./element/Doorlock.js')
+import airconAccessory from './element/Aircon.js';
+import lightAccessory from './element/Light.js';
+import doorlockAccessory from './element/Doorlock.js';
 
-var sHomeAPI = require('../lib/api.js')
-var Queue = require('../lib/queue.js')
-var caching = require('promise-memoize')
+import * as sHomeAPI from '../lib/api.js';
+import Queue from '../lib/queue.js';
+import caching from 'promise-memoize';
 
 let cachedDeviceInfoListRequest = caching(sHomeAPI.getDeviceInfoList, { maxAge: 10*1000 });
 
 const PLUGIN_NAME = "homebridge-shome";
 const PLATFORM_NAME = "sHomePlugin";
 
-module.exports = (api) => {
+let hap;
+let Accessory;
+
+export default (api) => {
   hap = api.hap;
   Accessory = api.platformAccessory;
 
